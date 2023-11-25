@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman Game</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Adventure Game</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, "PingFang SC", "Microsoft Yahei", sans-serif;
+        }
+        
+
+        main {
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100%;
+            background: #DBEEFF;
+            background-image: url('/static/back2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            color: #384d6c;
+        }
+
+        h1 {
+            font-weight: 1000;
+            font-size: 20px;
+            color: #384d6c;
+
+        }
+
+        .box p:nth-child(2) {
+            font-weight: 700;
+        }
+
+        .box {
+            display: grid;
+            place-items: center;
+            gap: 32px;
+
+            padding: 40px 56px;
+
+            background: #deebff;
+            box-shadow: 12px 12px 18px rgba(155, 196, 255, 0.42),
+                inset 10px 10px 11px rgba(250, 252, 255, 0.48),
+                inset -10px -10px 15px rgba(46, 129, 255, 0.22);
+            border-radius: 42px;
+        }
+
+        #button {
+            padding: 8px 32px;
+            border: none;
+            color: white;
+            font-weight: 900;
+
+            background: #cb5eff;
+            box-shadow: 2px 3px 13px rgba(197, 78, 253, 0.43),
+                inset -2px -2px 8px rgba(75, 10, 106, 0.43),
+                inset 2px 2px 6px rgba(251, 242, 255, 0.47);
+            border-radius: 22px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to Hangman!</h1>
-    <form action="/hangman" method="POST">
-        <input type="submit" value="Start Game">
-    </form>
+    <main>
+        <div class="box">
+            <p>Discover, Decode, Delight</p>
+            <h1>Welcome to Guess Adventure !</h1>
+            <form action="/hangman" method="POST">
+                <input type="submit" value="START GAME" id="button">
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>

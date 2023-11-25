@@ -61,7 +61,8 @@ def hangman():
             return render_template('result.html', result=result_message)
 
         session['current_display'] = current_display
-        return render_template('hangman.html', current_word=current_display)
+        session['guessed_letters'] = guessed_letters  # Update guessed letters in the session
+        return render_template('hangman.html', current_word=current_display, max_attempts=max_attempts, incorrect_attempts=incorrect_attempts, guessed_letters=guessed_letters)
 
     return redirect(url_for('index'))
 
